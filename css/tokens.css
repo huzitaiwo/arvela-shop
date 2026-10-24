@@ -1,0 +1,60 @@
+:root {
+  /* Color */
+  --color-ink: #2d2d2d;
+  --color-ink-soft: #383838;
+  --color-cream: #f7f6ef;
+  --color-white: #ffffff;
+  --color-orange: #f17001;
+  --color-text-muted: rgb(255 255 255 / 0.6);
+  --color-line: rgb(255 255 255 / 0.14);
+  --color-line-dark: rgb(45 45 45 / 0.14);
+
+  /* Typography */
+  --font-sans: "Inter Tight", "Inter", system-ui, -apple-system, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-body: 1rem;
+  --fs-stat: clamp(2.5rem, 5vw, 4.25rem);
+  --fs-display: clamp(2.5rem, 5vw, 4.5rem);
+  --fs-hero: clamp(7rem, 27vw, 30rem);
+  --tracking-tight: -0.04em;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --container: 90rem;
+  --gutter: clamp(1rem, 3vw, 2.5rem);
+  --header-h: 5.5rem;
+
+  /* Shape */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.25s;
+  --dur-med: 0.6s;
+  --dur-slow: 1.2s;
+
+  /* Layers */
+  --z-base: 1;
+  --z-media: 2;
+  --z-header: 50;
+  --z-drawer: 60;
+
+  --fs-title: clamp(2rem, 3.6vw, 3.25rem);
+
+  --shadow-card: 0 0.5rem 1.5rem rgb(0 0 0 / 0.12);
+  --color-field: #f1f0ea;
+}

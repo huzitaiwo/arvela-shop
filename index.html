@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arvela | Clean Designs. Warm Homes. Perfectly Nested.</title>
+    <meta
+      name="description"
+      content="Arvela offers clean, modern and timeless furniture crafted to bring calm and style to your everyday living."
+    />
+    <meta name="theme-color" content="#2d2d2d" />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/home.css" />
+
+    <link rel="preload" as="image" href="assets/images/hero-chairs-02.jpg" />
+  </head>
+  <body data-header="dark">
+    <div id="site-header"></div>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__top container">
+          <div
+            class="hero__switcher"
+            role="radiogroup"
+            aria-label="Choose featured furniture"
+          >
+            <div class="hero__option-wrap" style="--i: 0">
+              <button
+                class="hero__option"
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="-1"
+                data-hero-option
+                data-image="assets/images/hero-chairs-01.jpg"
+                data-alt="Black and orange chairs with beech wood legs, option one"
+              >
+                <img
+                  src="assets/images/hero-thumb-01.jpg"
+                  alt="Option one: dining table"
+                  width="64"
+                  height="64"
+                />
+              </button>
+              <span class="hero__option-num" aria-hidden="true">01</span>
+            </div>
+            <div class="hero__option-wrap" style="--i: 1">
+              <button
+                class="hero__option"
+                type="button"
+                role="radio"
+                aria-checked="true"
+                data-hero-option
+                data-image="assets/images/hero-chairs-02.jpg"
+                data-alt="Black and orange chairs with beech wood legs"
+              >
+                <img
+                  src="assets/images/hero-thumb-02.jpg"
+                  alt="Option two: orange chair"
+                  width="64"
+                  height="64"
+                />
+              </button>
+              <span class="hero__option-num" aria-hidden="true">02</span>
+            </div>
+            <div class="hero__option-wrap" style="--i: 2">
+              <button
+                class="hero__option"
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="-1"
+                data-hero-option
+                data-image="assets/images/hero-chairs-03.jpg"
+                data-alt="White chairs with beech wood legs"
+              >
+                <img
+                  src="assets/images/hero-thumb-03.jpg"
+                  alt="Option three: white chair"
+                  width="64"
+                  height="64"
+                />
+              </button>
+              <span class="hero__option-num" aria-hidden="true">03</span>
+            </div>
+          </div>
+
+          <div class="hero__intro" style="--i: 3">
+            <p>
+              Your journey to a calm, beautifully organized, and perfectly
+              nested home begins here.
+            </p>
+            <a class="btn btn--light" href="shop.html">
+              Get Your Furniture Now
+              <span class="btn__icon">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <dl class="hero__stats" style="--i: 4">
+            <div class="stat hero__stat--years">
+              <dt class="stat__label">Years Journey</dt>
+              <dd class="stat__value">
+                <span data-count="10" data-suffix="+">10+</span>
+              </dd>
+            </div>
+            <div class="stat hero__stat--customers">
+              <dt class="stat__label">Loyal Customers</dt>
+              <dd class="stat__value">
+                <span data-count="15" data-suffix="K+">15K+</span>
+              </dd>
+            </div>
+            <div class="stat hero__stat--collections">
+              <dt class="stat__label">Collections Served</dt>
+              <dd class="stat__value">
+                <span data-count="150" data-suffix="+">150+</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="sr-only"
+            >Arvela: furniture for a calm, beautifully organized home</span
+          >
+          <span class="hero__track" aria-hidden="true"
+            >h<span class="hero__a">a<i></i><i></i></span>rmonious</span
+          >
+        </h1>
+
+        <div class="hero__media">
+          <img
+            class="hero__chairs"
+            data-hero-image
+            src="assets/images/hero-chairs-02.jpg"
+            alt="Black and orange chairs with beech wood legs"
+            width="1200"
+            height="900"
+            fetchpriority="high"
+          />
+        </div>
+
+        <ul class="hero__tags container" aria-label="Our promise">
+          <li>Serene</li>
+          <li>Cozy</li>
+          <li>Effortless</li>
+        </ul>
+      </section>
+
+      <section class="pieces" aria-labelledby="pieces-title">
+        <div class="container">
+          <div class="pieces__head">
+            <h2
+              class="section-title pieces__title"
+              id="pieces-title"
+              data-reveal
+            >
+              Thoughtfully Designed Pieces
+            </h2>
+            <div class="pieces__intro" data-reveal style="--i: 1">
+              <p>
+                Explore our curated range of clean, modern, and timeless
+                furniture. Each piece is crafted to bring calm and style to your
+                everyday living.
+              </p>
+              <a class="btn btn--dark btn--sm" href="shop.html">
+                View All Products
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <ul class="category-grid">
+            <li data-reveal style="--i: 0">
+              <a
+                class="category-card category-card--feature"
+                href="shop.html?category=chair-sofa"
+              >
+                <span class="category-card__media">
+                  <img
+                    src="assets/images/category-chair-sofa.jpg"
+                    alt=""
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="category-card__row">
+                  <span class="category-card__title">Chair &amp; Sofa</span>
+                  <svg
+                    class="category-card__arrow"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li data-reveal style="--i: 1">
+              <a class="category-card" href="shop.html?category=table-desk">
+                <span class="category-card__media">
+                  <img
+                    src="assets/images/category-table-desk.jpg"
+                    alt=""
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="category-card__title">Table &amp; Desk</span>
+              </a>
+            </li>
+            <li data-reveal style="--i: 2">
+              <a
+                class="category-card"
+                href="shop.html?category=shelf-accessories"
+              >
+                <span class="category-card__media">
+                  <img
+                    src="assets/images/category-shelf.jpg"
+                    alt=""
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="category-card__title"
+                  >Shelf &amp; Accessories</span
+                >
+              </a>
+            </li>
+            <li data-reveal style="--i: 3">
+              <a class="category-card" href="shop.html?category=light-lamp">
+                <span class="category-card__media">
+                  <img
+                    src="assets/images/category-lamp.jpg"
+                    alt=""
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="category-card__title">Light &amp; Lamp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="why" aria-labelledby="why-title">
+        <div class="why__grid container">
+          <div class="why__intro">
+            <p class="why__eyebrow" data-reveal>Why Choose Us?</p>
+            <figure class="why__figure" data-reveal style="--i: 1">
+              <img
+                src="assets/images/why-living-well.jpg"
+                alt="White chair with beech legs beside a woven basket"
+                width="640"
+                height="600"
+                loading="lazy"
+              />
+            </figure>
+            <h2
+              class="section-title why__title"
+              id="why-title"
+              data-reveal
+              style="--i: 2"
+            >
+              Designed for Living Well
+            </h2>
+          </div>
+
+          <ul class="feature-grid">
+            <li data-reveal style="--i: 0">
+              <a class="feature-card" href="about.html#scandinavian-simplicity">
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M9 4h6l2 7H7l2-7Z" />
+                  <path d="M12 11v9M9 20h6" />
+                </svg>
+                <span class="feature-card__head">
+                  <h3 class="feature-card__title">Scandinavian Simplicity</h3>
+                  <svg
+                    class="feature-card__arrow"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </span>
+                <p class="feature-card__text">
+                  We embrace the beauty of minimalism—calm lines, neutral tones,
+                  and timeless form. Each piece is made to blend effortlessly
+                  with your space and life.
+                </p>
+              </a>
+            </li>
+            <li data-reveal style="--i: 1">
+              <a class="feature-card" href="about.html#crafted-with-care">
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"
+                  />
+                </svg>
+                <span class="feature-card__head">
+                  <h3 class="feature-card__title">Crafted with Care</h3>
+                  <svg
+                    class="feature-card__arrow"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </span>
+                <p class="feature-card__text">
+                  Our furniture is made using responsibly sourced materials and
+                  ethical production processes. Quality you can feel, durability
+                  you can trust.
+                </p>
+              </a>
+            </li>
+            <li data-reveal style="--i: 2">
+              <a class="feature-card" href="about.html#built-for-small-spaces">
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="5" y="5" width="14" height="14" rx="1" />
+                  <path d="M5 12h14" />
+                </svg>
+                <span class="feature-card__head">
+                  <h3 class="feature-card__title">Built for Small Spaces</h3>
+                  <svg
+                    class="feature-card__arrow"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </span>
+                <p class="feature-card__text">
+                  Whether you live in a studio or a starter home, our modular
+                  and multi-functional designs help you do more with
+                  less—without compromising comfort or style.
+                </p>
+              </a>
+            </li>
+            <li data-reveal style="--i: 3">
+              <a
+                class="feature-card feature-card--dark"
+                href="about.html#sustainable-choice"
+              >
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14Z" />
+                  <path d="m5 19 8-8" />
+                </svg>
+                <span class="feature-card__head">
+                  <h3 class="feature-card__title">A Sustainable Choice</h3>
+                  <svg
+                    class="feature-card__arrow"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </span>
+                <p class="feature-card__text">
+                  From flat-pack shipping to recyclable packaging, we design
+                  with the planet in mind—because conscious living starts at our
+                  home itself.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="banner" aria-labelledby="banner-title">
+        <div class="banner__media" data-parallax>
+          <img
+            src="assets/images/banner-flourish.jpg"
+            alt="Cushioned lounge chair beside a potted plant"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+        </div>
+        <div class="banner__inner container">
+          <h2 class="banner__title" id="banner-title" data-reveal>
+            <a class="banner__link" href="inspiration.html">
+              Space for Life to Flourish
+              <svg
+                class="banner__arrow"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+          </h2>
+          <p class="banner__text" data-reveal style="--i: 2">
+            Explore minimalist designs that bring warmth, light, and perfect
+            order to your everyday home.
+          </p>
+        </div>
+      </section>
+
+      <section class="collections" aria-labelledby="collections-title">
+        <div class="collections__head container">
+          <p class="collections__eyebrow" data-reveal>
+            Our Latest<br />Collections
+          </p>
+          <h2
+            class="section-title section-title--md collections__title"
+            id="collections-title"
+            data-reveal
+            style="--i: 1"
+          >
+            Thoughtfully Designed Crafts &amp; Pieces
+          </h2>
+          <a
+            class="link-arrow collections__all"
+            href="shop.html"
+            data-reveal
+            style="--i: 2"
+          >
+            View All Products
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="product-list" data-product-list>
+          <ul>
+            <li data-reveal style="--i: 0">
+              <a class="product-row" href="product.html?slug=aura-table-lamp">
+                <h3 class="product-row__name">The Aura Table Lamp</h3>
+                <p class="product-row__desc">
+                  A soft, ambient glow for your bedside or reading nook.
+                </p>
+                <span class="product-row__thumb"
+                  ><img
+                    src="assets/images/product-aura-lamp.jpg"
+                    alt=""
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                /></span>
+                <data class="product-row__price" value="79">$79</data>
+              </a>
+            </li>
+            <li data-reveal style="--i: 1">
+              <a
+                class="product-row"
+                href="product.html?slug=solace-coffee-chair"
+              >
+                <h3 class="product-row__name">The Solace Coffee Chair</h3>
+                <p class="product-row__desc">
+                  Your everyday centerpiece. Functional design.
+                </p>
+                <span class="product-row__thumb"
+                  ><img
+                    src="assets/images/product-solace-chair.jpg"
+                    alt=""
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                /></span>
+                <data class="product-row__price" value="119">$119</data>
+              </a>
+            </li>
+            <li data-reveal style="--i: 2">
+              <a class="product-row" href="product.html?slug=horizon-bookshelf">
+                <h3 class="product-row__name">The Horizon Bookshelf</h3>
+                <p class="product-row__desc">
+                  Organize your stories and display your treasures.
+                </p>
+                <span class="product-row__thumb"
+                  ><img
+                    src="assets/images/product-horizon-bookshelf.jpg"
+                    alt=""
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                /></span>
+                <data class="product-row__price" value="189">$189</data>
+              </a>
+            </li>
+            <li data-reveal style="--i: 3">
+              <a class="product-row" href="product.html?slug=core-desk">
+                <h3 class="product-row__name">The Core Desk</h3>
+                <p class="product-row__desc">
+                  A spacious and minimalist workspace designed for clarity and
+                  focus.
+                </p>
+                <span class="product-row__thumb"
+                  ><img
+                    src="assets/images/product-core-desk.jpg"
+                    alt=""
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                /></span>
+                <data class="product-row__price" value="249">$249</data>
+              </a>
+            </li>
+            <li data-reveal style="--i: 4">
+              <a
+                class="product-row"
+                href="product.html?slug=liven-working-chair"
+              >
+                <h3 class="product-row__name">The Liven Working Chair</h3>
+                <p class="product-row__desc">
+                  Simple comfort for every week. Modern profile, built to last.
+                </p>
+                <span class="product-row__thumb"
+                  ><img
+                    src="assets/images/product-liven-chair.jpg"
+                    alt=""
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                /></span>
+                <data class="product-row__price" value="149">$149</data>
+              </a>
+            </li>
+          </ul>
+          <span class="row-cursor" data-row-cursor aria-hidden="true"
+            ><span class="row-cursor__dot"></span
+          ></span>
+        </div>
+      </section>
+
+      <section class="comfort" aria-labelledby="comfort-title">
+        <div class="container">
+          <div class="comfort__head">
+            <span class="comfort__dot" data-parallax aria-hidden="true"
+              ><i data-reveal></i
+            ></span>
+            <h2
+              class="section-title section-title--md comfort__title"
+              id="comfort-title"
+              data-reveal
+            >
+              Find Your Comfort Style
+            </h2>
+            <p class="comfort__text" data-reveal style="--i: 1">
+              Get inspired to create your perfect home. Dive into our tips for
+              small spaces, discover charming decor ideas, and explore beautiful
+              moodboards.
+            </p>
+            <a
+              class="btn btn--dark btn--sm comfort__btn"
+              href="inspiration.html"
+              data-reveal
+              style="--i: 2"
+            >
+              Explore More Inspiration
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+          </div>
+
+          <ul class="article-grid">
+            <li data-reveal style="--i: 0">
+              <article class="article-card" style="--ratio: 1 / 1">
+                <div class="article-card__media">
+                  <img
+                    src="assets/images/journal-declutter.jpg"
+                    alt=""
+                    width="640"
+                    height="640"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="article-card__title">
+                  <a
+                    class="article-card__link"
+                    href="inspiration.html#declutter"
+                    >The Art of Decluttering: Finding Calm in a Clean Space</a
+                  >
+                </h3>
+                <p class="article-card__text">
+                  Learn simple techniques to declutter your home and create a
+                  calmer, more spacious, and stress-free atmosphere.
+                </p>
+                <p class="article-card__meta">
+                  <span class="article-card__tag">Home Organization</span>
+                  <svg
+                    class="article-card__arrow"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </p>
+              </article>
+            </li>
+            <li data-reveal style="--i: 1">
+              <article class="article-card" style="--ratio: 1.3 / 1">
+                <div class="article-card__media">
+                  <img
+                    src="assets/images/journal-cozy-nook.jpg"
+                    alt=""
+                    width="640"
+                    height="492"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="article-card__title">
+                  <a
+                    class="article-card__link"
+                    href="inspiration.html#cozy-nook"
+                    >Designing Your Modern Cozy Nook</a
+                  >
+                </h3>
+                <p class="article-card__text">
+                  Explore how Scandinavian design principles can transform a
+                  small corner into a warm, comfortable, and stylish retreat.
+                </p>
+                <p class="article-card__meta">
+                  <span class="article-card__tag">Small Spaces</span>
+                  <svg
+                    class="article-card__arrow"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </p>
+              </article>
+            </li>
+            <li data-reveal style="--i: 2">
+              <article class="article-card" style="--ratio: 1.12 / 1">
+                <div class="article-card__media">
+                  <img
+                    src="assets/images/journal-timeless-pieces.jpg"
+                    alt=""
+                    width="640"
+                    height="571"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="article-card__title">
+                  <a
+                    class="article-card__link"
+                    href="inspiration.html#timeless-pieces"
+                    >Investing in Timeless Furniture Pieces</a
+                  >
+                </h3>
+                <p class="article-card__text">
+                  Discover why choosing furniture with enduring design can save
+                  you money and create a home that remains beautiful for years.
+                </p>
+                <p class="article-card__meta">
+                  <span class="article-card__tag">Furniture Guide</span>
+                  <svg
+                    class="article-card__arrow"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="who" aria-labelledby="who-title">
+        <div class="who__inner container">
+          <h2
+            class="section-title section-title--md who__title"
+            id="who-title"
+            data-reveal
+          >
+            Who We Are
+          </h2>
+          <p class="who__lead" data-reveal style="--i: 1">
+            At Arvela, we believe a home should be a calm and organized
+            sanctuary.
+          </p>
+          <a
+            class="btn btn--light btn--sm who__btn"
+            href="about.html"
+            data-reveal
+            style="--i: 2"
+          >
+            Learn More About Us
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
+
+          <dl class="who__stats">
+            <div class="stat" data-reveal style="--i: 0">
+              <dt class="stat__label">Years Journey</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="10" data-suffix="+">10+</span>
+              </dd>
+            </div>
+            <div class="stat" data-reveal style="--i: 1">
+              <dt class="stat__label">Loyal Customers</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="15" data-suffix="K+"
+                  >15K+</span
+                >
+              </dd>
+            </div>
+            <div class="stat" data-reveal style="--i: 2">
+              <dt class="stat__label">Collections Served</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="150" data-suffix="+"
+                  >150+</span
+                >
+              </dd>
+            </div>
+            <div class="stat" data-reveal style="--i: 3">
+              <dt class="stat__label">Countries Satisfied</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="70" data-suffix="+">70+</span>
+              </dd>
+            </div>
+          </dl>
+
+          <p class="who__note" data-reveal style="--i: 2">
+            Learn about our Swedish roots and our passion for bringing quality,
+            affordable design to every living space.
+          </p>
+        </div>
+      </section>
+
+      <section class="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="reviews__head">
+            <h2
+              class="section-title section-title--md reviews__title"
+              id="reviews-title"
+              data-reveal
+            >
+              <span class="reviews__word">What Our Customers</span>
+              <span class="reviews__rule" aria-hidden="true"></span>
+              <span class="reviews__word">Said</span>
+            </h2>
+            <div class="reviews__sub" data-reveal style="--i: 1">
+              <p>Real homes. Real stories. Real comfort.</p>
+              <a class="link-arrow" href="testimonials.html">
+                See All Testimonials
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="reviews__body" data-reviews data-reveal>
+            <div
+              class="reviews__panel"
+              id="review-panel"
+              role="tabpanel"
+              aria-labelledby="review-tab-1"
+            >
+              <figure class="reviews__portrait">
+                <img
+                  data-review-image
+                  src="assets/images/avatar-handsome.png"
+                  alt="Portrait of Customer Name 1"
+                  width="480"
+                  height="480"
+                  loading="lazy"
+                />
+              </figure>
+              <figure class="reviews__card">
+                <blockquote class="reviews__quote" data-review-quote>
+                  <p>
+                    We just moved into our first apartment, and Arvela made it
+                    feel like home overnight. The furniture is clean, modern,
+                    and surprisingly easy to assemble. We love the cozy vibe it
+                    brings.
+                  </p>
+                </blockquote>
+                <figcaption class="reviews__cite" data-review-cite>
+                  Customer Name 1, City 1
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="reviews__tabs"
+              role="tablist"
+              aria-label="Customer stories"
+              aria-orientation="vertical"
+            >
+              <button
+                class="reviews__tab"
+                type="button"
+                role="tab"
+                id="review-tab-1"
+                aria-selected="true"
+                aria-controls="review-panel"
+                style="--o: 0"
+                data-image="assets/images/avatar-handsome.png"
+                data-name="Customer Name 1"
+                data-city="City 1"
+                data-quote="We just moved into our first apartment, and Arvela made it feel like home overnight. The furniture is clean, modern, and surprisingly easy to assemble. We love the cozy vibe it brings."
+              >
+                <img
+                  class="reviews__avatar"
+                  src="assets/images/avatar-handsome.png"
+                  alt=""
+                  width="40"
+                  height="44"
+                  loading="lazy"
+                />
+                <span class="reviews__who"
+                  ><span class="reviews__name">Customer Name 1</span
+                  ><span class="reviews__city">City 1</span></span
+                >
+              </button>
+              <button
+                class="reviews__tab"
+                type="button"
+                role="tab"
+                id="review-tab-2"
+                aria-selected="false"
+                aria-controls="review-panel"
+                tabindex="-1"
+                style="--o: 3"
+                data-image="assets/images/avatar-handsome.png"
+                data-name="Customer Name 2"
+                data-city="City 2"
+                data-quote="The Core Desk completely changed how I work from home. Sturdy, minimal, and exactly the calm corner I was looking for."
+              >
+                <img
+                  class="reviews__avatar"
+                  src="assets/images/avatar-handsome.png"
+                  alt=""
+                  width="40"
+                  height="44"
+                  loading="lazy"
+                />
+                <span class="reviews__who"
+                  ><span class="reviews__name">Customer Name 2</span
+                  ><span class="reviews__city">City 2</span></span
+                >
+              </button>
+              <button
+                class="reviews__tab"
+                type="button"
+                role="tab"
+                id="review-tab-3"
+                aria-selected="false"
+                aria-controls="review-panel"
+                tabindex="-1"
+                style="--o: 0"
+                data-image="assets/images/avatar-handsome.png"
+                data-name="Customer Name 3"
+                data-city="City 3"
+                data-quote="Delivery was quick and the flat-pack instructions were actually clear. Everything fit our small living room perfectly."
+              >
+                <img
+                  class="reviews__avatar"
+                  src="assets/images/avatar-handsome.png"
+                  alt=""
+                  width="40"
+                  height="44"
+                  loading="lazy"
+                />
+                <span class="reviews__who"
+                  ><span class="reviews__name">Customer Name 3</span
+                  ><span class="reviews__city">City 3</span></span
+                >
+              </button>
+              <button
+                class="reviews__tab"
+                type="button"
+                role="tab"
+                id="review-tab-4"
+                aria-selected="false"
+                aria-controls="review-panel"
+                tabindex="-1"
+                style="--o: 2"
+                data-image="assets/images/avatar-handsome.png"
+                data-name="Customer Name 4"
+                data-city="City 4"
+                data-quote="Quality you can feel. After a year, our dining chairs still look and feel brand new."
+              >
+                <img
+                  class="reviews__avatar"
+                  src="assets/images/avatar-handsome.png"
+                  alt=""
+                  width="40"
+                  height="44"
+                  loading="lazy"
+                />
+                <span class="reviews__who"
+                  ><span class="reviews__name">Customer Name 4</span
+                  ><span class="reviews__city">City 4</span></span
+                >
+              </button>
+              <button
+                class="reviews__tab"
+                type="button"
+                role="tab"
+                id="review-tab-5"
+                aria-selected="false"
+                aria-controls="review-panel"
+                tabindex="-1"
+                style="--o: 1"
+                data-image="assets/images/avatar-handsome.png"
+                data-name="Customer Name 5"
+                data-city="City 5"
+                data-quote="From browsing to unboxing, the whole experience was effortless. Our home finally feels organized and warm."
+              >
+                <img
+                  class="reviews__avatar"
+                  src="assets/images/avatar-handsome.png"
+                  alt=""
+                  width="40"
+                  height="44"
+                  loading="lazy"
+                />
+                <span class="reviews__who"
+                  ><span class="reviews__name">Customer Name 5</span
+                  ><span class="reviews__city">City 5</span></span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="site-cta"></div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </body>
+</html>
