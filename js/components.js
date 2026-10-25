@@ -188,18 +188,31 @@ function mountNewsletter() {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const email = form.elements.email.value.trim();
-    if (!form.elements.email.checkValidity() || !email) {
+    const input = form.elements.email;
+    const button = form.querySelector("button[type='submit']");
+
+    if (!input.value.trim() || !input.checkValidity()) {
       msg.textContent = "Please enter a valid email address.";
       return;
     }
+    if (!window.ArvelaAPI?.subscribe) {
+      msg.textContent =
+        "Subscriptions are unavailable right now. Please try again later.";
+      return;
+    }
+
+    button.disabled = true;
     try {
-      // Firebase wiring comes later: window.ArvelaAPI.subscribe(email)
-      await window.ArvelaAPI?.subscribe?.(email);
-      msg.textContent = "Thanks for subscribing.";
-      form.reset();
+      const result = await window.ArvelaAPI.subscribe(input.value);
+      msg.textContent =
+        result === "exists"
+          ? "You're already subscribed."
+          : "Thanks for subscribing.";
+      if (result === "ok") form.reset();
     } catch {
       msg.textContent = "Something went wrong. Please try again.";
+    } finally {
+      button.disabled = false;
     }
   });
 }
