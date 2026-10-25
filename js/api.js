@@ -27,6 +27,7 @@ const withId = (snap) => ({ id: snap.id, ...snap.data() });
 // sort: "newest" | "price-asc" | "price-desc"
 export async function getProducts({
   category,
+  featured,
   sort = "newest",
   max = 24,
 } = {}) {
@@ -38,6 +39,7 @@ export async function getProducts({
 
   const constraints = [];
   if (category) constraints.push(where("category", "==", category));
+  if (featured) constraints.push(where("featured", "==", true));
   constraints.push(orderBy(...order), limit(max));
 
   const snap = await getDocs(query(productsCol, ...constraints));

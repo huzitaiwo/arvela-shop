@@ -71,7 +71,7 @@ button {
 
 .container {
   width: 100%;
-  max-width: var(--container);
+  max-width: var(--container); /* 90rem, about 1440px */
   margin-inline: auto;
   padding-inline: var(--gutter);
 }

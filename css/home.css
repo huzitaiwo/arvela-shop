@@ -273,38 +273,8 @@
   }
 }
 
-/* ---------- Thoughtfully Designed Pieces ---------- */
 .pieces {
   padding-block: var(--space-16) var(--space-24);
-}
-
-.pieces__head {
-  display: grid;
-  gap: var(--space-6);
-  margin-bottom: var(--space-12);
-}
-.pieces__title {
-  max-width: 7em;
-}
-
-.pieces__intro {
-  display: grid;
-  gap: var(--space-8);
-  justify-items: start;
-  max-width: 24rem;
-  font-size: var(--fs-sm);
-  line-height: 1.25;
-}
-
-@media (min-width: 48em) {
-  .pieces__head {
-    grid-template-columns: 3fr 2fr;
-    align-items: start;
-    margin-bottom: var(--space-24);
-  }
-  .pieces__intro {
-    padding-top: var(--space-2);
-  }
 }
 
 /* ---------- Why Choose Us ---------- */

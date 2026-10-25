@@ -546,6 +546,216 @@
   }
 }
 
+/* ---------- Split head: title left, intro right (shared) ---------- */
+.split-head {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+.split-head__title {
+  max-width: 7em;
+}
+.split-head__intro {
+  display: grid;
+  gap: var(--space-8);
+  justify-items: start;
+  max-width: 24rem;
+  font-size: var(--fs-sm);
+  line-height: 1.25;
+}
+
+@media (min-width: 48em) {
+  .split-head {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+    margin-bottom: var(--space-24);
+  }
+  .split-head--compact {
+    margin-bottom: var(--space-12);
+  }
+  .split-head__intro {
+    padding-top: var(--space-2);
+  }
+}
+
+/* ---------- Product grid + card (shared: shop, product, search) ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8) var(--space-3);
+}
+@media (min-width: 48em) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-12) var(--space-4);
+  }
+}
+@media (min-width: 75em) {
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  animation: card-in var(--dur-slow) var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+.product-card__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+}
+.product-card__media img {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+.product-card:hover .product-card__media img {
+  transform: scale(1.06);
+}
+
+.product-card__info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem var(--space-3);
+  align-items: baseline;
+}
+.product-card__name {
+  font-size: clamp(0.9375rem, 1.3vw, 1.125rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.product-card__price {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+.product-card__desc {
+  grid-column: 1 / -1;
+  font-size: 0.6875rem;
+  line-height: 1.3;
+  opacity: 0.5;
+}
+
+/* The whole card is clickable through the name link */
+.product-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.product-card__link:focus-visible {
+  outline: none;
+}
+.product-card__link:focus-visible::after {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.product-card__add {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--color-orange);
+  color: var(--color-white);
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-med) var(--ease-out);
+}
+.product-card__add:hover {
+  transform: rotate(90deg);
+}
+.product-card__add .icon-check {
+  display: none;
+}
+.product-card__add.is-added {
+  background: var(--color-ink);
+  transform: none;
+}
+.product-card__add.is-added .icon-plus {
+  display: none;
+}
+.product-card__add.is-added .icon-check {
+  display: block;
+}
+
+@media (hover: hover) {
+  .product-card__add {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  .product-card:hover .product-card__add,
+  .product-card__add:focus-visible,
+  .product-card__add.is-added {
+    opacity: 1;
+    transform: none;
+  }
+  .product-card:hover .product-card__add:hover {
+    transform: rotate(90deg);
+  }
+}
+
+.product-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+/* Loading skeleton */
+.product-card--skeleton .product-card__media {
+  background: linear-gradient(90deg, #efede4 25%, #f7f6ef 50%, #efede4 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+.skeleton-line {
+  display: block;
+  height: 0.875rem;
+  border-radius: var(--radius-pill);
+  background: #efede4;
+}
+.skeleton-line--short {
+  width: 55%;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
 /* ---------- Section title + small button (shared) ---------- */
 .section-title {
   font-size: var(--fs-display);
