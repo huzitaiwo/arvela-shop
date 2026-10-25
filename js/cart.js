@@ -19,7 +19,8 @@ function read() {
 
 export const getItems = () => items.map((item) => ({ ...item }));
 export const count = () => items.reduce((sum, item) => sum + item.qty, 0);
-export const subtotal = () => items.reduce((sum, item) => sum + item.price * item.qty, 0);
+export const subtotal = () =>
+  items.reduce((sum, item) => sum + item.price * item.qty, 0);
 
 function updateBadge() {
   const n = count();
@@ -28,14 +29,19 @@ function updateBadge() {
     el.hidden = n === 0;
   });
   document.querySelectorAll(".icon-btn[href='cart.html']").forEach((link) => {
-    link.setAttribute("aria-label", n ? `Cart, ${n} item${n === 1 ? "" : "s"}` : "Cart");
+    link.setAttribute(
+      "aria-label",
+      n ? `Cart, ${n} item${n === 1 ? "" : "s"}` : "Cart",
+    );
   });
 }
 
 function emit() {
   updateBadge();
   document.dispatchEvent(
-    new CustomEvent("cart:change", { detail: { items: getItems(), count: count(), subtotal: subtotal() } })
+    new CustomEvent("cart:change", {
+      detail: { items: getItems(), count: count(), subtotal: subtotal() },
+    }),
   );
 }
 
@@ -43,22 +49,38 @@ function syncRemote() {
   if (!uid) return;
   clearTimeout(syncTimer);
   syncTimer = setTimeout(() => {
-    setDoc(doc(db, "carts", uid), { items, updatedAt: serverTimestamp() }).catch(() => {});
+    setDoc(doc(db, "carts", uid), {
+      items,
+      updatedAt: serverTimestamp(),
+    }).catch(() => {});
   }, 600);
 }
 
 function persist() {
-  try { localStorage.setItem(KEY, JSON.stringify(items)); } catch { /* storage unavailable */ }
+  try {
+    localStorage.setItem(KEY, JSON.stringify(items));
+  } catch {
+    /* storage unavailable */
+  }
   syncRemote();
   emit();
 }
 
-const clampQty = (qty) => Math.max(1, Math.min(MAX_QTY, Math.floor(Number(qty) || 1)));
+const clampQty = (qty) =>
+  Math.max(1, Math.min(MAX_QTY, Math.floor(Number(qty) || 1)));
 
 export function addItem({ id, slug, name, price, image }, qty = 1) {
   const existing = items.find((item) => item.id === id);
   if (existing) existing.qty = clampQty(existing.qty + qty);
-  else items.push({ id, slug, name, price: Number(price), image, qty: clampQty(qty) });
+  else
+    items.push({
+      id,
+      slug,
+      name,
+      price: Number(price),
+      image,
+      qty: clampQty(qty),
+    });
   persist();
 }
 
@@ -92,7 +114,11 @@ export function init() {
 // Called whenever the signed-in user changes
 export async function setUser(user) {
   if (!user) {
-    if (uid) { uid = null; items = []; persist(); } // don't leave a cart on a shared device
+    if (uid) {
+      uid = null;
+      items = [];
+      persist();
+    } // don't leave a cart on a shared device
     return;
   }
 
@@ -103,9 +129,14 @@ export async function setUser(user) {
     const merged = new Map(remote.map((item) => [item.id, item]));
     items.forEach((item) => {
       const other = merged.get(item.id);
-      merged.set(item.id, other ? { ...item, qty: Math.max(item.qty, other.qty) } : item);
+      merged.set(
+        item.id,
+        other ? { ...item, qty: Math.max(item.qty, other.qty) } : item,
+      );
     });
     items = [...merged.values()];
-  } catch { /* keep the local cart if the read fails */ }
+  } catch {
+    /* keep the local cart if the read fails */
+  }
   persist();
-}x
+}
