@@ -1,6 +1,11 @@
 import { getProducts } from "./api.js";
 import * as cart from "./cart.js";
-import { productCard, skeletonCard } from "./ui.js";
+import {
+  productCard,
+  skeletonCard,
+  bindQuickAdd,
+  CATEGORY_NAMES,
+} from "./ui.js";
 
 const PAGE_SIZE = 8;
 const CATEGORY_NAMES = {
@@ -166,25 +171,7 @@ moreBtn.addEventListener("click", () => {
     [firstNew]?.focus({ preventScroll: true });
 });
 
-grid.addEventListener("click", (e) => {
-  const button = e.target.closest("[data-add]");
-  if (!button) return;
-
-  const product = state.all.find((item) => item.id === button.dataset.add);
-  if (!product) return;
-
-  cart.addItem({
-    id: product.id,
-    slug: product.slug,
-    name: product.name,
-    price: product.price,
-    image: product.image,
-  });
-
-  button.classList.add("is-added");
-  announce.textContent = `${product.name} added to cart`;
-  setTimeout(() => button.classList.remove("is-added"), 1600);
-});
+bindQuickAdd(grid, (id) => state.all.find((item) => item.id === id), announce);
 
 readUrl();
 syncControls();

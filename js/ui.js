@@ -1,4 +1,13 @@
 import { formatPrice } from "./api.js";
+import * as cart from "./cart.js";
+
+export const CATEGORY_NAMES = {
+  "": "All",
+  "chair-sofa": "Chair & Sofa",
+  "table-desk": "Table & Desk",
+  "shelf-accessories": "Shelf & Accessories",
+  "light-lamp": "Light & Lamp",
+};
 
 export const esc = (value) =>
   String(value ?? "").replace(
@@ -47,4 +56,27 @@ export function skeletonCard() {
         </div>
       </div>
     </li>`;
+}
+
+/* One quick-add handler for every product grid */
+export function bindQuickAdd(container, findProduct, announceEl) {
+  container.addEventListener("click", (e) => {
+    const button = e.target.closest("[data-add]");
+    if (!button) return;
+
+    const product = findProduct(button.dataset.add);
+    if (!product) return;
+
+    cart.addItem({
+      id: product.id,
+      slug: product.slug,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+    });
+
+    button.classList.add("is-added");
+    if (announceEl) announceEl.textContent = `${product.name} added to cart`;
+    setTimeout(() => button.classList.remove("is-added"), 1600);
+  });
 }
