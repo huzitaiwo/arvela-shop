@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product | Arvela</title>
+    <meta
+      name="description"
+      content="Clean, modern and timeless furniture from Arvela."
+    />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+  <body data-header="light">
+    <div id="site-header"></div>
+
+    <main id="main" class="product">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li data-crumb-category hidden></li>
+            <li aria-current="page" data-crumb-current>Loading…</li>
+          </ol>
+        </nav>
+
+        <div class="product__layout" data-product aria-busy="true">
+          <div class="product__gallery">
+            <div class="product__stage product__stage--skeleton"></div>
+          </div>
+          <div class="product__info" aria-hidden="true">
+            <span class="skeleton-line skeleton-line--short"></span>
+            <span class="skeleton-line" style="height: 3rem"></span>
+            <span class="skeleton-line skeleton-line--short"></span>
+            <span class="skeleton-line"></span>
+            <span class="skeleton-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <section
+        class="related"
+        aria-labelledby="related-title"
+        data-related
+        hidden
+      >
+        <div class="container">
+          <h2 class="section-title section-title--md" id="related-title">
+            You may also like
+          </h2>
+          <ul class="product-grid" data-related-grid></ul>
+        </div>
+      </section>
+
+      <p class="sr-only" role="status" data-related-status></p>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/product.js"></script>
+  </body>
+</html>
