@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Article | Arvela</title>
+    <meta
+      name="description"
+      content="Ideas and guides for a calm, beautifully organized home from Arvela."
+    />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/inspiration.css" />
+  </head>
+  <body data-header="light">
+    <div id="site-header"></div>
+
+    <main id="main" class="article-page">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inspiration.html">Inspiration</a></li>
+            <li aria-current="page" data-crumb-current>Loading…</li>
+          </ol>
+        </nav>
+
+        <article data-article aria-busy="true">
+          <div class="article__hero article__hero--skeleton"></div>
+        </article>
+      </div>
+
+      <section class="more-reads" aria-labelledby="more-title" data-more hidden>
+        <div class="container">
+          <h2 class="section-title section-title--md" id="more-title">
+            Keep reading
+          </h2>
+          <ul class="article-grid" data-more-grid></ul>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-cta"></div>
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/article.js"></script>
+  </body>
+</html>
