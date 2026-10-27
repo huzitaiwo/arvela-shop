@@ -41,18 +41,19 @@
             aria-label="Items in your cart"
           ></ul>
 
-          <aside class="cart-summary" aria-labelledby="summary-title">
-            <h2 class="cart-summary__title" id="summary-title">
-              Order summary
-            </h2>
-            <dl class="cart-summary__row">
+          <aside
+            class="summary summary--sticky"
+            aria-labelledby="summary-title"
+          >
+            <h2 class="summary__title" id="summary-title">Order summary</h2>
+            <dl class="summary__row">
               <dt>Subtotal</dt>
               <dd data-cart-subtotal>$0</dd>
             </dl>
-            <p class="cart-summary__note">
-              Shipping and taxes are calculated at checkout.
+            <p class="summary__note">
+              Shipping and taxes are confirmed after you place your order.
             </p>
-            <a class="btn btn--dark cart-summary__checkout" href="checkout.html"
+            <a class="btn btn--dark btn--block" href="checkout.html"
               >Checkout</a
             >
             <a class="link-arrow" href="shop.html">

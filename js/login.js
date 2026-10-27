@@ -7,6 +7,8 @@ import {
   watchAuth,
 } from "./auth.js";
 
+import { showAlert, hideAlert, clearErrors, validateForm } from "./forms.js";
+
 const card = document.querySelector("[data-auth]");
 const titleEl = card.querySelector("[data-auth-title]");
 const leadEl = card.querySelector("[data-auth-lead]");
@@ -33,12 +35,6 @@ const COPY = {
   },
 };
 
-const MESSAGES = {
-  valueMissing: "This field is required.",
-  typeMismatch: "Enter a valid email address.",
-  tooShort: "Use at least 6 characters.",
-};
-
 // Only plain same-site page names are allowed, never external URLs
 const params = new URLSearchParams(location.search);
 const rawNext = params.get("next") || "";
@@ -48,47 +44,8 @@ const next = /^[a-z0-9-]+\.html(\?[\w=&%-]*)?$/i.test(rawNext)
 
 let busy = false;
 
-/* ----- Status + validation ----- */
-function showStatus(message, type) {
-  statusEl.textContent = message;
-  statusEl.className = `alert alert--${type}`;
-  statusEl.setAttribute("role", type === "error" ? "alert" : "status");
-  statusEl.hidden = false;
-}
-
-const clearStatus = () => {
-  statusEl.hidden = true;
-  statusEl.textContent = "";
-};
-
-function clearErrors(form) {
-  form
-    .querySelectorAll("input")
-    .forEach((input) => input.removeAttribute("aria-invalid"));
-  form
-    .querySelectorAll("[data-error-for]")
-    .forEach((el) => (el.textContent = ""));
-}
-
-function validate(form) {
-  let firstInvalid = null;
-
-  form.querySelectorAll("input").forEach((input) => {
-    const valid = input.checkValidity();
-    const errorEl = form.querySelector(`[data-error-for="${input.name}"]`);
-    const reason = Object.keys(MESSAGES).find((key) => input.validity[key]);
-
-    input.setAttribute("aria-invalid", String(!valid));
-    if (errorEl)
-      errorEl.textContent = valid
-        ? ""
-        : MESSAGES[reason] || "Check this field.";
-    if (!valid && !firstInvalid) firstInvalid = input;
-  });
-
-  firstInvalid?.focus();
-  return !firstInvalid;
-}
+const showStatus = (message, type) => showAlert(statusEl, message, type);
+const clearStatus = () => hideAlert(statusEl);
 
 /* ----- Views ----- */
 function setMode(mode, { focus = true } = {}) {
@@ -143,7 +100,7 @@ forms.forEach((form) => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     clearStatus();
-    if (!validate(form)) return;
+    if (!validateForm(form)) return;
 
     const button = form.querySelector('button[type="submit"]');
     const label = button.textContent;
