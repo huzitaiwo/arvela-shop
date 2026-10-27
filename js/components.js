@@ -115,7 +115,7 @@ const footerTemplate = `
     </div>
 
     <div class="site-footer__bottom container">
-      <img class="site-footer__art" src="assets/images/footer-table.jpg" alt="" width="448" height="320" loading="lazy">
+      <img class="site-footer__art" src="assets/images/footer-table.png" alt="" width="448" height="320" loading="lazy">
       <h2 class="site-footer__invite">Get Inspired Daily</h2>
       <div class="site-footer__side">
         <ul class="site-footer__social" aria-label="Social media">

@@ -433,7 +433,7 @@
   letter-spacing: var(--tracking-tight);
   line-height: 0.98;
 }
-.site-footer__copy span {
+.site-footer__copy > span {
   display: block;
 }
 

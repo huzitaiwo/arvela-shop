@@ -1,5 +1,4 @@
 import { getProducts } from "./api.js";
-import * as cart from "./cart.js";
 import {
   productCard,
   skeletonCard,
@@ -8,13 +7,6 @@ import {
 } from "./ui.js";
 
 const PAGE_SIZE = 8;
-const CATEGORY_NAMES = {
-  "": "All",
-  "chair-sofa": "Chair & Sofa",
-  "table-desk": "Table & Desk",
-  "shelf-accessories": "Shelf & Accessories",
-  "light-lamp": "Light & Lamp",
-};
 
 const grid = document.querySelector("[data-shop-grid]");
 const countEl = document.querySelector("[data-shop-count]");

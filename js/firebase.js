@@ -1,4 +1,4 @@
-import { initializeApp, getFirestore, getAuth } from "./vendor.js";
+import { initializeApp, initializeFirestore, getAuth } from "./vendor.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyApBud5tWiFnX7d5Gfen751no-f-0LT1eM",
@@ -10,5 +10,9 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+
+// Falls back to long polling when the streaming connection is blocked or unstable
+export const db = initializeFirestore(app, {
+  experimentalAutoDetectLongPolling: true,
+});
 export const auth = getAuth(app);
