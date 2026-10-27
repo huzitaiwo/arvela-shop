@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Your Cart | Arvela</title>
+    <meta name="description" content="Review the pieces in your Arvela cart." />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body data-header="light">
+    <div id="site-header"></div>
+
+    <main id="main" class="cart">
+      <div class="container">
+        <header class="cart__head">
+          <h1 class="section-title" tabindex="-1" data-cart-title data-reveal>
+            Your Cart
+          </h1>
+          <p class="cart__count" data-cart-count-label></p>
+        </header>
+
+        <p class="cart-notice" role="status" data-cart-notice hidden></p>
+
+        <div class="cart__layout" data-cart-layout hidden>
+          <ul
+            class="cart-lines"
+            data-cart-lines
+            aria-label="Items in your cart"
+          ></ul>
+
+          <aside class="cart-summary" aria-labelledby="summary-title">
+            <h2 class="cart-summary__title" id="summary-title">
+              Order summary
+            </h2>
+            <dl class="cart-summary__row">
+              <dt>Subtotal</dt>
+              <dd data-cart-subtotal>$0</dd>
+            </dl>
+            <p class="cart-summary__note">
+              Shipping and taxes are calculated at checkout.
+            </p>
+            <a class="btn btn--dark cart-summary__checkout" href="checkout.html"
+              >Checkout</a
+            >
+            <a class="link-arrow" href="shop.html">
+              Continue shopping
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+          </aside>
+        </div>
+
+        <div class="state" data-cart-empty hidden>
+          <h2 class="state__title">Your cart is empty</h2>
+          <p class="state__text">
+            Looks like you haven't picked a piece yet. Browse the collection and
+            find something that feels like home.
+          </p>
+          <a class="btn btn--dark btn--sm" href="shop.html">
+            Start shopping
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
+        </div>
+
+        <p class="sr-only" role="status" data-cart-announce></p>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/cart-page.js"></script>
+  </body>
+</html>

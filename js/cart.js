@@ -102,6 +102,37 @@ export function clear() {
   persist();
 }
 
+// Refresh prices and names from the live catalog.
+// Items that no longer exist, or are sold out, are removed. Returns their names.
+export function syncCatalog(products) {
+  const bySlug = new Map(products.map((product) => [product.slug, product]));
+  const removed = [];
+  let changed = false;
+
+  items = items.filter((item) => {
+    const live = bySlug.get(item.slug);
+    if (!live || live.inStock === false) {
+      removed.push(item.name);
+      changed = true;
+      return false;
+    }
+    if (
+      live.price !== item.price ||
+      live.name !== item.name ||
+      live.image !== item.image
+    ) {
+      item.price = live.price;
+      item.name = live.name;
+      item.image = live.image;
+      changed = true;
+    }
+    return true;
+  });
+
+  if (changed) persist();
+  return removed;
+}
+
 export function init() {
   updateBadge();
   window.addEventListener("storage", (e) => {
