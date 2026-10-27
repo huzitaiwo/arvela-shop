@@ -1,0 +1,117 @@
+/* ---------- Listing ---------- */
+.journal {
+  padding-top: calc(var(--header-h) + var(--space-12));
+  padding-bottom: var(--space-24);
+}
+
+.journal__toolbar {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  padding-block: var(--space-4);
+  border-block: 1px solid var(--color-line-dark);
+}
+.journal__count {
+  font-size: var(--fs-xs);
+  opacity: 0.6;
+}
+
+.article-grid--list {
+  gap: var(--space-12) var(--space-6);
+}
+.article-grid--list .article-card {
+  animation: card-in var(--dur-slow) var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+.article-card--skeleton .article-card__media {
+  background: linear-gradient(90deg, #efede4 25%, #f7f6ef 50%, #efede4 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@media (min-width: 48em) {
+  .journal__toolbar {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+/* ---------- Article page ---------- */
+.article-page {
+  padding-top: calc(var(--header-h) + var(--space-4));
+  padding-bottom: var(--space-24);
+}
+
+.article__head {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 52rem;
+  margin: var(--space-12) auto var(--space-8);
+}
+.article__cat {
+  justify-self: start;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  opacity: 0.6;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out);
+}
+.article__cat:hover {
+  color: var(--color-orange);
+  opacity: 1;
+}
+.article__title {
+  max-width: 12em;
+}
+
+.article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-size: var(--fs-xs);
+  opacity: 0.6;
+}
+
+.article__hero {
+  max-width: 64rem;
+  margin: 0 auto var(--space-12);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+}
+.article__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article__hero--skeleton {
+  background: linear-gradient(90deg, #efede4 25%, #f7f6ef 50%, #efede4 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+.article__body {
+  margin-inline: auto;
+}
+
+.article__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: 40rem;
+  margin: var(--space-16) auto 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-line-dark);
+}
+
+.more-reads {
+  margin-top: var(--space-24);
+}
+.more-reads .section-title {
+  margin-bottom: var(--space-12);
+}

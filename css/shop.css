@@ -11,32 +11,6 @@
   border-block: 1px solid var(--color-line-dark);
 }
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.filter {
-  padding: 0.5rem var(--space-4);
-  border: 1px solid var(--color-line-dark);
-  border-radius: var(--radius-pill);
-  font-size: var(--fs-xs);
-  font-weight: 500;
-  transition:
-    background-color var(--dur-fast) var(--ease-out),
-    color var(--dur-fast) var(--ease-out),
-    border-color var(--dur-fast) var(--ease-out);
-}
-.filter:hover {
-  border-color: var(--color-ink);
-}
-.filter[aria-pressed="true"] {
-  border-color: var(--color-ink);
-  background: var(--color-ink);
-  color: var(--color-white);
-}
-
 .shop-toolbar__meta {
   display: flex;
   align-items: center;

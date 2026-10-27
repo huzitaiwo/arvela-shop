@@ -80,3 +80,52 @@ export function bindQuickAdd(container, findProduct, announceEl) {
     setTimeout(() => button.classList.remove("is-added"), 1600);
   });
 }
+
+export const ARTICLE_CATEGORIES = {
+  "home-organization": "Home Organization",
+  "small-spaces": "Small Spaces",
+  "furniture-guide": "Furniture Guide",
+};
+
+export function formatDate(timestamp) {
+  const date = timestamp?.toDate?.();
+  return date
+    ? new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(date)
+    : "";
+}
+
+export function articleCard(article, index = 0) {
+  const href = `article.html?slug=${encodeURIComponent(article.slug)}`;
+  return `
+    <li>
+      <article class="article-card" style="--ratio: 4 / 3; --i:${index}">
+        <div class="article-card__media">
+          <img src="${esc(article.image)}" alt="" width="640" height="480" loading="${index < 3 ? "eager" : "lazy"}">
+        </div>
+        <h3 class="article-card__title"><a class="article-card__link" href="${href}">${esc(article.title)}</a></h3>
+        <p class="article-card__text">${esc(article.excerpt)}</p>
+        <p class="article-card__meta">
+          <span class="article-card__tag">${esc(ARTICLE_CATEGORIES[article.category] || "")}</span>
+          <svg class="article-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </p>
+      </article>
+    </li>`;
+}
+
+/* ----- Articles ----- */
+const articlesCol = collection(db, "articles");
+
+// The journal is small, so we fetch it whole and filter in the browser (no extra index needed)
+export async function getArticles({ max = 50 } = {}) {
+  const snap = await getDocs(
+    query(articlesCol, orderBy("publishedAt", "desc"), limit(max)),
+  );
+  return snap.docs.map(withId);
+}
+
+export async function getArticle(slug) {
+  const snap = await getDocs(
+    query(articlesCol, where("slug", "==", slug), limit(1)),
+  );
+  return snap.empty ? null : withId(snap.docs[0]);
+}

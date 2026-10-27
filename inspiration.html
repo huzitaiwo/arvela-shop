@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inspiration | Arvela</title>
+    <meta
+      name="description"
+      content="Tips for small spaces, decor ideas and moodboards to help you create a calm, beautifully organized home."
+    />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/inspiration.css" />
+  </head>
+  <body data-header="light">
+    <div id="site-header"></div>
+
+    <main id="main" class="journal">
+      <div class="container">
+        <div class="split-head split-head--compact">
+          <h1 class="section-title split-head__title" data-reveal>
+            Find Your Comfort Style
+          </h1>
+          <div class="split-head__intro" data-reveal style="--i: 1">
+            <p>
+              Get inspired to create your perfect home. Dive into our tips for
+              small spaces, discover charming decor ideas, and explore beautiful
+              moodboards.
+            </p>
+          </div>
+        </div>
+
+        <div class="journal__toolbar" data-reveal>
+          <div class="filters" role="group" aria-label="Filter by topic">
+            <button
+              class="filter"
+              type="button"
+              data-category=""
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-category="home-organization"
+              aria-pressed="false"
+            >
+              Home Organization
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-category="small-spaces"
+              aria-pressed="false"
+            >
+              Small Spaces
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-category="furniture-guide"
+              aria-pressed="false"
+            >
+              Furniture Guide
+            </button>
+          </div>
+          <p class="journal__count" data-count></p>
+        </div>
+
+        <ul
+          class="article-grid article-grid--list"
+          data-grid
+          aria-busy="true"
+        ></ul>
+
+        <div class="state" data-state hidden>
+          <h2 class="state__title" data-state-title></h2>
+          <p class="state__text" data-state-text></p>
+          <button
+            class="btn btn--dark btn--sm"
+            type="button"
+            data-state-action
+          ></button>
+        </div>
+
+        <p class="sr-only" role="status" data-announce></p>
+      </div>
+    </main>
+
+    <div id="site-cta"></div>
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/inspiration.js"></script>
+  </body>
+</html>
