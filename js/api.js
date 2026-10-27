@@ -110,3 +110,16 @@ export async function placeOrder({ uid, items, customer, note = "" }) {
   });
   return ref.id;
 }
+
+/* ----- Orders (signed-in user) ----- */
+export async function getMyOrders(uid) {
+  const snap = await getDocs(
+    query(
+      collection(db, "orders"),
+      where("uid", "==", uid),
+      orderBy("createdAt", "desc"),
+      limit(50),
+    ),
+  );
+  return snap.docs.map(withId);
+}

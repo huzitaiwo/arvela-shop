@@ -1341,3 +1341,114 @@
   font-size: var(--fs-sm);
   opacity: 0.7;
 }
+
+/* ---------- Button variants (shared) ---------- */
+.btn--block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-block: 1rem;
+}
+
+.btn--outline {
+  padding: 0.875rem var(--space-6);
+  border: 1px solid var(--color-line-dark);
+  background: transparent;
+  color: inherit;
+}
+.btn--outline:hover:not(:disabled) {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+.btn--outline.btn--sm {
+  padding: 0.625rem var(--space-4);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+  transform: none;
+}
+
+/* ---------- Form field (shared: login, checkout, contact) ---------- */
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+.field__label {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+}
+.field__control {
+  position: relative;
+}
+
+.field__input {
+  width: 100%;
+  padding: 0.875rem var(--space-4);
+  border: 1px solid var(--color-line-dark);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  font-size: var(--fs-sm);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+.field__input:hover {
+  border-color: rgb(45 45 45 / 0.4);
+}
+.field__input:focus-visible {
+  border-color: var(--color-ink);
+  outline: 2px solid var(--color-orange);
+  outline-offset: 0;
+}
+.field__input[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+.field__control .field__input {
+  padding-right: 4.5rem;
+}
+
+.field__toggle {
+  position: absolute;
+  top: 50%;
+  right: var(--space-2);
+  padding: 0.5rem var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  opacity: 0.6;
+  transform: translateY(-50%);
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+.field__toggle:hover {
+  opacity: 1;
+}
+
+.field__hint {
+  font-size: 0.6875rem;
+  opacity: 0.6;
+}
+.field__error {
+  min-height: 0;
+  font-size: 0.75rem;
+  color: var(--color-error);
+}
+.field__error:empty {
+  display: none;
+}
+
+/* ---------- Alert (shared) ---------- */
+.alert {
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--color-ink);
+  border-radius: var(--radius-sm);
+  background: var(--color-cream);
+  font-size: var(--fs-xs);
+  line-height: 1.4;
+}
+.alert--error {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+.alert--success {
+  border-color: var(--color-orange);
+}

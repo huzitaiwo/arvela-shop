@@ -8,6 +8,8 @@
   --color-text-muted: rgb(255 255 255 / 0.6);
   --color-line: rgb(255 255 255 / 0.14);
   --color-line-dark: rgb(45 45 45 / 0.14);
+  --color-field: #f1f0ea;
+  --color-error: #b3261e;
 
   /* Typography */
   --font-sans: "Inter Tight", "Inter", system-ui, -apple-system, sans-serif;
@@ -56,5 +58,4 @@
   --fs-title: clamp(2rem, 3.6vw, 3.25rem);
 
   --shadow-card: 0 0.5rem 1.5rem rgb(0 0 0 / 0.12);
-  --color-field: #f1f0ea;
 }

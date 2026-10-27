@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>My Account | Arvela</title>
+    <meta
+      name="description"
+      content="View your Arvela account and order history."
+    />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/account.css" />
+  </head>
+  <body data-header="light">
+    <div id="site-header"></div>
+
+    <main id="main" class="account">
+      <div class="container">
+        <p class="account__loading" data-account-loading role="status">
+          Loading your account…
+        </p>
+
+        <div data-account hidden>
+          <header class="account__head">
+            <div>
+              <p class="account__eyebrow">My account</p>
+              <h1 class="section-title section-title--md" data-greeting>
+                Hello
+              </h1>
+              <p class="account__email" data-email></p>
+            </div>
+            <button class="btn btn--outline btn--sm" type="button" data-signout>
+              Sign out
+            </button>
+          </header>
+
+          <section aria-labelledby="orders-title">
+            <h2 class="account__subtitle" id="orders-title">Order history</h2>
+            <p data-orders-loading role="status">Loading your orders…</p>
+            <ul class="orders" data-orders></ul>
+
+            <div class="state" data-orders-empty hidden>
+              <h3 class="state__title">No orders yet</h3>
+              <p class="state__text">
+                When you place an order, it will show up here so you can follow
+                it.
+              </p>
+              <a class="btn btn--dark btn--sm" href="shop.html">
+                Start shopping
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="state" data-orders-error hidden>
+              <h3 class="state__title">Couldn't load orders</h3>
+              <p class="state__text">Check your connection and try again.</p>
+              <button
+                class="btn btn--dark btn--sm"
+                type="button"
+                data-orders-retry
+              >
+                Try again
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/account.js"></script>
+  </body>
+</html>
