@@ -71,27 +71,6 @@ counters.forEach((el) => {
   setTimeout(() => runCounter(el), reduceMotion ? 0 : 700);
 });
 
-/* Stats below the fold count up when they scroll into view */
-const viewCounters = document.querySelectorAll("[data-count-view]");
-
-if (viewCounters.length && "IntersectionObserver" in window && !reduceMotion) {
-  viewCounters.forEach(
-    (el) => (el.textContent = "0" + (el.dataset.suffix || "")),
-  );
-
-  const countObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        runCounter(entry.target);
-        countObserver.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.6 },
-  );
-  viewCounters.forEach((el) => countObserver.observe(el));
-}
-
 /* ----- Scroll parallax (headline + chairs) ----- */
 const hero = document.querySelector(".hero");
 

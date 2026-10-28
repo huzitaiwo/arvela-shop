@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us | Arvela</title>
+    <meta
+      name="description"
+      content="Arvela designs clean, warm and perfectly nested furniture so every home can feel like a calm, organized sanctuary."
+    />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body data-header="light">
+    <div id="site-header"></div>
+
+    <main id="main" class="about">
+      <div class="container">
+        <div class="split-head split-head--compact">
+          <h1 class="section-title split-head__title" data-reveal>
+            About Arvela
+          </h1>
+          <div class="split-head__intro" data-reveal style="--i: 1">
+            <p>
+              Clean designs. Warm homes. Perfectly nested. We make furniture
+              that brings calm and order to everyday living.
+            </p>
+            <a class="btn btn--dark btn--sm" href="shop.html">
+              Shop the Collection
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <figure class="about__hero" data-reveal>
+          <img
+            src="assets/images/banner-flourish.jpg"
+            alt="A cushioned lounge chair beside a potted plant in a warm, light-filled room"
+            width="1600"
+            height="900"
+            fetchpriority="high"
+          />
+        </figure>
+      </div>
+
+      <section class="container story" id="story" aria-labelledby="story-title">
+        <div>
+          <p class="story__eyebrow" data-reveal>Our Story</p>
+          <h2
+            class="section-title section-title--md story__title"
+            id="story-title"
+            data-reveal
+            style="--i: 1"
+          >
+            A home should be a calm and organized sanctuary.
+          </h2>
+        </div>
+        <div class="prose" data-reveal style="--i: 2">
+          <p>
+            Arvela began with a simple belief: a home should be a calm and
+            organized sanctuary. Too much furniture is loud, fussy and built to
+            be replaced. We wanted pieces that quietly do their job and still
+            look right years from now.
+          </p>
+          <p>
+            So we design in clean lines, warm natural materials and a restrained
+            palette. Every chair, desk and shelf is made to work in real homes,
+            including small ones, and to be easy to assemble and easy to live
+            with.
+          </p>
+          <p>
+            We keep our range deliberately small. Fewer pieces means we can
+            focus on getting each one right, from the way it feels to the way it
+            ships.
+          </p>
+        </div>
+      </section>
+
+      <section class="band" aria-label="Arvela in numbers">
+        <div class="container">
+          <dl class="about-stats">
+            <div class="stat" data-reveal style="--i: 0">
+              <dt class="stat__label">Years Journey</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="10" data-suffix="+">10+</span>
+              </dd>
+            </div>
+            <div class="stat" data-reveal style="--i: 1">
+              <dt class="stat__label">Loyal Customers</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="15" data-suffix="K+"
+                  >15K+</span
+                >
+              </dd>
+            </div>
+            <div class="stat" data-reveal style="--i: 2">
+              <dt class="stat__label">Collections Served</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="150" data-suffix="+"
+                  >150+</span
+                >
+              </dd>
+            </div>
+            <div class="stat" data-reveal style="--i: 3">
+              <dt class="stat__label">Countries Satisfied</dt>
+              <dd class="stat__value">
+                <span data-count-view data-count="70" data-suffix="+">70+</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="values" aria-labelledby="values-title">
+        <div class="container">
+          <h2
+            class="section-title section-title--md values__title"
+            id="values-title"
+            data-reveal
+          >
+            Designed for Living Well
+          </h2>
+
+          <ul class="feature-grid feature-grid--four">
+            <li id="scandinavian-simplicity" data-reveal style="--i: 0">
+              <article class="feature-card feature-card--static">
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M9 4h6l2 7H7l2-7Z" />
+                  <path d="M12 11v9M9 20h6" />
+                </svg>
+                <div class="feature-card__head">
+                  <h3 class="feature-card__title">Scandinavian Simplicity</h3>
+                </div>
+                <p class="feature-card__text">
+                  We embrace the beauty of minimalism—calm lines, neutral tones,
+                  and timeless form. Each piece is made to blend effortlessly
+                  with your space and life.
+                </p>
+              </article>
+            </li>
+            <li id="crafted-with-care" data-reveal style="--i: 1">
+              <article class="feature-card feature-card--static">
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"
+                  />
+                </svg>
+                <div class="feature-card__head">
+                  <h3 class="feature-card__title">Crafted with Care</h3>
+                </div>
+                <p class="feature-card__text">
+                  Our furniture is made using responsibly sourced materials and
+                  ethical production processes. Quality you can feel, durability
+                  you can trust.
+                </p>
+              </article>
+            </li>
+            <li id="built-for-small-spaces" data-reveal style="--i: 2">
+              <article class="feature-card feature-card--static">
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="5" y="5" width="14" height="14" rx="1" />
+                  <path d="M5 12h14" />
+                </svg>
+                <div class="feature-card__head">
+                  <h3 class="feature-card__title">Built for Small Spaces</h3>
+                </div>
+                <p class="feature-card__text">
+                  Whether you live in a studio or a starter home, our modular
+                  and multi-functional designs help you do more with
+                  less—without compromising comfort or style.
+                </p>
+              </article>
+            </li>
+            <li id="sustainable-choice" data-reveal style="--i: 3">
+              <article
+                class="feature-card feature-card--static feature-card--dark"
+              >
+                <svg
+                  class="feature-card__icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14Z" />
+                  <path d="m5 19 8-8" />
+                </svg>
+                <div class="feature-card__head">
+                  <h3 class="feature-card__title">A Sustainable Choice</h3>
+                </div>
+                <p class="feature-card__text">
+                  From flat-pack shipping to recyclable packaging, we design
+                  with the planet in mind—because conscious living starts at our
+                  home itself.
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <figure class="note container" data-reveal>
+        <blockquote class="note__quote">
+          <p>
+            I started Arvela because I wanted furniture that makes a home feel
+            calm, not crowded. Everything we sell is something I'd happily put
+            in my own living room.
+          </p>
+        </blockquote>
+        <figcaption class="note__by">
+          <img
+            class="note__avatar"
+            src="assets/images/avatar-handsome.png"
+            alt=""
+            width="48"
+            height="48"
+            loading="lazy"
+          />
+          <span>Handsome <span class="note__role">Founder, Arvela</span></span>
+        </figcaption>
+      </figure>
+    </main>
+
+    <div id="site-cta"></div>
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/counters.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

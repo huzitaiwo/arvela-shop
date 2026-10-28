@@ -123,3 +123,21 @@ export async function getMyOrders(uid) {
   );
   return snap.docs.map(withId);
 }
+
+/* ----- Articles ----- */
+const articlesCol = collection(db, "articles");
+
+// The journal is small, so we fetch it whole and filter in the browser (no extra index needed)
+export async function getArticles({ max = 50 } = {}) {
+  const snap = await getDocs(
+    query(articlesCol, orderBy("publishedAt", "desc"), limit(max)),
+  );
+  return snap.docs.map(withId);
+}
+
+export async function getArticle(slug) {
+  const snap = await getDocs(
+    query(articlesCol, where("slug", "==", slug), limit(1)),
+  );
+  return snap.empty ? null : withId(snap.docs[0]);
+}

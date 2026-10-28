@@ -1,0 +1,96 @@
+.about {
+  padding-top: calc(var(--header-h) + var(--space-12));
+}
+
+.about__hero {
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--space-24);
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+.about__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----- Story ----- */
+.story {
+  display: grid;
+  gap: var(--space-8);
+  padding-bottom: var(--space-24);
+}
+.story__eyebrow {
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-xs);
+  opacity: 0.6;
+}
+.story__title {
+  max-width: 9em;
+}
+
+/* ----- Stats ----- */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-12) var(--space-6);
+  margin: 0;
+}
+
+/* ----- Values ----- */
+.values {
+  padding-block: var(--space-24);
+}
+.values__title {
+  max-width: 8em;
+  margin-bottom: var(--space-12);
+}
+
+/* ----- Founder note ----- */
+.note {
+  display: grid;
+  gap: var(--space-6);
+  max-width: 52rem;
+  margin: 0 auto;
+  padding-bottom: var(--space-24);
+}
+.note__quote {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.1;
+}
+.note__by {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+}
+.note__avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-orange);
+}
+.note__role {
+  display: block;
+  font-size: var(--fs-xs);
+  opacity: 0.6;
+}
+
+@media (min-width: 48em) {
+  .about__hero {
+    aspect-ratio: 21 / 9;
+  }
+  .about-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 56.25em) {
+  .story {
+    grid-template-columns: 2fr 3fr;
+    gap: var(--space-16);
+  }
+}

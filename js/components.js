@@ -108,15 +108,16 @@ const footerTemplate = `
           </ul>
         </nav>
       </div>
+
       <p class="site-footer__copy">
-        <span>&copy;<span data-year></span> Arvela.</span>
-        <span>All Rights Reserved.</span>
+        <span class="site-footer__line">&copy;<span data-year></span> Arvela.</span>
+        <span class="site-footer__line">All Rights Reserved.</span>
       </p>
     </div>
 
-    <div class="site-footer__bottom container">
-      <img class="site-footer__art" src="assets/images/footer-table.png" alt="" width="448" height="320" loading="lazy">
+    <div class="site-footer__bottom">
       <h2 class="site-footer__invite">Get Inspired Daily</h2>
+
       <div class="site-footer__side">
         <ul class="site-footer__social" aria-label="Social media">
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
@@ -132,6 +133,10 @@ const footerTemplate = `
           </form>
           <p class="newsletter__msg" role="status" data-newsletter-msg></p>
         </div>
+      </div>
+
+      <div class="site-footer__art">
+        <img src="assets/images/footer-table.png" alt="" width="448" height="320" loading="lazy">
       </div>
     </div>
   </footer>`;
