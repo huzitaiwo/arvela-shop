@@ -1,0 +1,132 @@
+.support {
+  padding-top: calc(var(--header-h) + var(--space-12));
+  padding-bottom: var(--space-24);
+}
+.support__nav {
+  margin-bottom: var(--space-16);
+}
+
+.support-section {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-12);
+  border-top: 1px solid var(--color-line-dark);
+  scroll-margin-top: var(--space-8);
+}
+.support-section__title {
+  font-size: var(--fs-title);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+}
+.support-section__lead {
+  max-width: 20rem;
+  margin-top: var(--space-3);
+  font-size: var(--fs-sm);
+  line-height: 1.35;
+  opacity: 0.7;
+}
+
+.support .prose h3 {
+  margin-top: var(--space-8);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+.support .prose h3:first-child {
+  margin-top: 0;
+}
+.support .prose p {
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* ----- Numbered steps ----- */
+.steps {
+  display: grid;
+  gap: var(--space-4);
+  counter-reset: step;
+  max-width: 36rem;
+}
+.steps li {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+  counter-increment: step;
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+}
+.steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+}
+.steps strong {
+  display: block;
+  font-weight: 500;
+}
+.steps span {
+  opacity: 0.7;
+}
+
+/* ----- Contact form ----- */
+.contact-form {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 36rem;
+}
+.contact-form .field-row {
+  display: grid;
+  gap: var(--space-4);
+}
+.contact-form__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-done {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+  max-width: 36rem;
+  padding: var(--space-8);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+}
+.contact-done h3 {
+  font-size: var(--fs-title);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+}
+.contact-done h3:focus {
+  outline: none;
+}
+.contact-done p {
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+  opacity: 0.75;
+}
+
+@media (min-width: 36em) {
+  .contact-form .field-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 56.25em) {
+  .support-section {
+    grid-template-columns: 2fr 3fr;
+    gap: var(--space-16);
+  }
+}
