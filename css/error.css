@@ -1,0 +1,47 @@
+.lost {
+  display: grid;
+  align-items: center;
+  min-height: 100svh;
+  padding: calc(var(--header-h) + var(--space-8)) 0 var(--space-16);
+}
+.lost__inner {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-6);
+}
+
+/* The middle zero is the brand's orange dot */
+.lost__code {
+  font-size: clamp(7rem, 28vw, 22rem);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: 0.85;
+}
+.lost__zero {
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  margin-inline: 0.05em;
+  border-radius: 50%;
+  background: var(--color-orange);
+  animation: hero-pop var(--dur-slow) var(--ease-out) both 0.2s;
+}
+
+.lost__title {
+  font-size: var(--fs-title);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+}
+.lost__text {
+  max-width: 26rem;
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  opacity: 0.7;
+}
+.lost__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}

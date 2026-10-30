@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <!-- A missing URL can be several folders deep, so every link below must resolve from the site root -->
+    <base href="/" />
+    <title>Page not found | Arvela</title>
+    <meta name="description" content="We couldn't find that page." />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/error.css" />
+  </head>
+  <body data-header="light">
+    <div id="site-header"></div>
+
+    <main id="main" class="lost">
+      <div class="container lost__inner">
+        <p class="lost__code" aria-hidden="true">
+          4<span class="lost__zero"></span>4
+        </p>
+        <h1 class="lost__title" data-reveal>This page has wandered off</h1>
+        <p class="lost__text" data-reveal style="--i: 1">
+          The page you're looking for may have been moved, or the link might be
+          wrong. Let's get you back to something comfortable.
+        </p>
+        <div class="lost__actions" data-reveal style="--i: 2">
+          <a class="btn btn--dark btn--sm" href="index.html">
+            Back to home
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
+          <a class="btn btn--outline btn--sm" href="shop.html"
+            >Browse the shop</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
